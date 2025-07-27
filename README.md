@@ -52,3 +52,14 @@ A Bash-based backup automation script for Linux that supports filtering by file 
    * Optionally encrypts the archive with GPG if `-encrypt` is used
    * Sends an email notification (editable)
 
+## 🔐 Encryption
+
+To enable encryption with `GPG` and AES256:
+
+* Make sure GPG is installed:
+
+  ```bash
+  sudo apt install gnupg
+  ```
+* Use the `-encrypt` flag as shown in usage.
+
