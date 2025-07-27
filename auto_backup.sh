@@ -32,3 +32,5 @@ if [[ $3 == "--dry-run" ]]; then
     exit 0
 fi
 
+echo "Creating archive at $DEST..."
+tar -czf "$DEST" -T $CONF_FILE
