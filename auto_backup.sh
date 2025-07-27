@@ -50,3 +50,8 @@ find "$BACKUP_DIR" -name "backup_*.tar.gz" -mtime +$DAYS_TO_KEEP -exec rm {} \;
 echo "Backup finished successfully: $DEST" | mail -s "Backup Success" radin1383rvn@gmail.com
 
 
+if [[ $3 == "-encrypt" ]]; then
+    gpg --symmetric --cipher-algo AES256 "$DEST"
+    rm "$DEST"
+    exit 0
+fi
