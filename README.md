@@ -19,3 +19,23 @@ A Bash-based backup automation script for Linux that supports filtering by file 
 ./backup.sh <backup_directory> <file_extension> [--dry-run | -encrypt]
 ```
 
+### 🔸 Examples
+
+✅ Backup all `.txt` files:
+
+```bash
+./backup.sh /home/radin/backups txt
+```
+
+✅ Dry run – show what will be backed up:
+
+```bash
+./backup.sh /home/radin/backups txt --dry-run
+```
+
+✅ Backup with encryption:
+
+```bash
+./backup.sh /home/radin/backups txt -encrypt
+```
+
