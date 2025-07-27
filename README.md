@@ -39,3 +39,16 @@ A Bash-based backup automation script for Linux that supports filtering by file 
 ./backup.sh /home/radin/backups txt -encrypt
 ```
 
+## 📋 How it Works
+
+1. Searches `/home/radin/Desktop` for files with the specified extension.
+2. Lists them in `backup.conf`.
+3. If `--dry-run` is used, it just prints the list and exits.
+4. Otherwise:
+
+   * Compresses the files into `backup_<timestamp>.tar.gz`
+   * Logs the backup info in `backup.log`
+   * Deletes old backups (> 7 days)
+   * Optionally encrypts the archive with GPG if `-encrypt` is used
+   * Sends an email notification (editable)
+
