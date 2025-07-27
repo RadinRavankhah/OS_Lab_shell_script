@@ -13,3 +13,9 @@ A Bash-based backup automation script for Linux that supports filtering by file 
 - 📝 Logs backup info (size, time, archive name)
 - 📧 Sends an email on successful backup
 
+## 🚀 Usage
+
+```bash
+./backup.sh <backup_directory> <file_extension> [--dry-run | -encrypt]
+```
+
