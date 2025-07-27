@@ -25,3 +25,10 @@ echo "Searching for *.$FILE_EXT files..."
 
 find /home/parnian/Desktop -type f -name "*.$FILE_EXT" 2>/dev/null > $CONF_FILE
 
+
+if [[ $3 == "--dry-run" ]]; then
+    echo "Dry run: would backup the following files:"
+    cat $CONF_FILE
+    exit 0
+fi
+
