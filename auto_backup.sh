@@ -33,4 +33,14 @@ if [[ $3 == "--dry-run" ]]; then
 fi
 
 echo "Creating archive at $DEST..."
+START_TIME=$(date +%s)
+
 tar -czf "$DEST" -T $CONF_FILE
+
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+SIZE=$(du -sh "$DEST" | cut -f1)
+
+
+echo "$TIMESTAMP Backup completed: $DEST | Size: $SIZE | Duration: ${DURATION}s" >> $LOG_FILE
+
