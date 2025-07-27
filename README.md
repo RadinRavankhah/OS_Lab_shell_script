@@ -77,3 +77,22 @@ sudo apt update
 sudo apt install tar gnupg mailutils
 ```
 
+## 📅 Cron (Optional Automation)
+
+To schedule the script daily at 1 AM:
+
+```bash
+crontab -e
+```
+
+Add this line:
+
+```bash
+0 1 * * * /path/to/backup.sh /home/radin/backups txt >> /home/radin/backups/cron.log 2>&1
+```
+
+## 🧑‍💻 Author
+
+**Radin Ravankhah**
+Computer Engineering Student
+Shiraz University of Technology
