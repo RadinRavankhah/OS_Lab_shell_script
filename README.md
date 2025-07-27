@@ -63,3 +63,17 @@ To enable encryption with `GPG` and AES256:
   ```
 * Use the `-encrypt` flag as shown in usage.
 
+## 🧪 Requirements
+
+* `bash`
+* `tar`
+* `gpg` (optional, for encryption)
+* `mail` (for email notifications)
+
+Install required tools on Debian/Ubuntu:
+
+```bash
+sudo apt update
+sudo apt install tar gnupg mailutils
+```
+
