@@ -44,3 +44,6 @@ SIZE=$(du -sh "$DEST" | cut -f1)
 
 echo "$TIMESTAMP Backup completed: $DEST | Size: $SIZE | Duration: ${DURATION}s" >> $LOG_FILE
 
+find "$BACKUP_DIR" -name "backup_*.tar.gz" -mtime +$DAYS_TO_KEEP -exec rm {} \;
+
+
